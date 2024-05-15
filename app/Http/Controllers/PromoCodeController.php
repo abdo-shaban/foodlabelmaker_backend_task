@@ -24,6 +24,6 @@ class PromoCodeController extends Controller
     public function checkValidity(CheckValidityPromoCodeRequest $request)
     {
         $prices = $this->promoCodeService->checkValidity(CheckValidityPromoCodeDTOData::from($request->validated()));
-        return  response()->json([$prices]);
+        return  response()->json($prices);
     }
 }
