@@ -49,7 +49,7 @@ class PromoCodeService
             throw new MessageException('Invalid promo code', 404);
         }
 
-        if ($promoCode->expiry_date < now()->toDateString()) {
+        if ($promoCode->expiry_date && $promoCode->expiry_date < now()->toDateString()) {
             throw new MessageException('Promo code expired', 404);
         }
 
