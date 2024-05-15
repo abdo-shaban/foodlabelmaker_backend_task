@@ -15,4 +15,9 @@ class PromoCode extends Model
             'user_ids' => 'array'
         ];
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_promo_code')->withTimestamps();
+    }
 }

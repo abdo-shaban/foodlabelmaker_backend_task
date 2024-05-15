@@ -56,4 +56,9 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    public function promoCodes()
+    {
+        return $this->belongsToMany(PromoCode::class, 'user_promo_code')->withTimestamps();
+    }
+
 }

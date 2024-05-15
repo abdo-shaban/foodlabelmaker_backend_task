@@ -12,4 +12,5 @@ Route::prefix('auth')->group(function () {
 
 Route::middleware('auth:api')->group(function () {
     Route::post('promo-codes', [PromoCodeController::class, 'store']);
+    Route::get('promo-codes/validate', [PromoCodeController::class, 'checkValidity']);
 });
