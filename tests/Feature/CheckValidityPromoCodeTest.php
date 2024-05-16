@@ -80,7 +80,7 @@ class CheckValidityPromoCodeTest extends TestCase
     }
 
     // Throws a MessageException with status code 404 if the promo code is expired.
-    public function test_check_validity_throws_exception_if_promo_code_expired()
+    public function test_check_validity_throws_message_exception_if_promo_code_expired()
     {
         // Arrange
         $promoCode = PromoCode::factory()->create([
@@ -103,7 +103,7 @@ class CheckValidityPromoCodeTest extends TestCase
     }
 
     // Throws a MessageException with status code 404 if the promo code has reached its maximum usage count.
-    public function test_check_validity_throws_exception_if_promo_code_reached_max_usage_count()
+    public function test_check_validity_throws_message_exception_if_promo_code_reached_max_usage_count()
     {
         // Arrange
         $promoCode = PromoCode::factory()->create([
@@ -127,7 +127,7 @@ class CheckValidityPromoCodeTest extends TestCase
     }
 
     // Throws a MessageException with status code 404 if the promo code has reached its maximum usage per user.
-    public function test_check_validity_throws_exception_if_promo_code_reached_max_usage_per_user()
+    public function test_check_validity_throws_message_exception_if_promo_code_reached_max_usage_per_user()
     {
         // Arrange
         $promoCode = PromoCode::factory()->create([
@@ -152,7 +152,7 @@ class CheckValidityPromoCodeTest extends TestCase
     }
 
     // Throws a MessageException with status code 404 if the promo code is not valid for the user.
-    public function test_check_validity_throws_exception_if_promo_code_is_not_valid_for_user()
+    public function test_check_validity_throws_message_exception_if_promo_code_is_not_valid_for_user()
     {
         // Arrange
         $promoCode = PromoCode::factory()->create(['user_ids' =>  [9999]]);
