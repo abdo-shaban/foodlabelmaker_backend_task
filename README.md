@@ -1,7 +1,7 @@
 # food label maker task
 
 ### we need to run only one command will setup all and also will start containers`./setup.sh`
-- if you issue with execute permission run `chmod +x setup.sh` to be executable then run `./setup.sh`
+- If you encounter issues with execution permissions, you can resolve them by running the following commands: `chmod +x setup.sh` to be executable then run `./setup.sh`
 ### postman collection with some examples of responses **[link](https://documenter.getpostman.com/view/2494634/2sA3JRYyV1)** 
 - After calling the login API, the authentication token will be stored locally within the application with collection scope. This token will then be automatically injected into subsequent API requests for authentication purposes.
 
