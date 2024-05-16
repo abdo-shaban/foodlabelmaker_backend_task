@@ -22,3 +22,6 @@ cp .env.example .env
 
 # Migrate and seed the database
 ./vendor/bin/sail artisan migrate --seed
+
+# run tests
+./vendor/bin/sail test
